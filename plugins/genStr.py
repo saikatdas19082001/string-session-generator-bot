@@ -13,6 +13,7 @@ from pyrogram.errors import (
     PhoneCodeInvalid, PhoneCodeExpired
 )
 
+ if text.startswith("/string"):
 
 API_TEXT = """🙋‍♂ Hi {},
 
