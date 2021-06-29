@@ -13,7 +13,6 @@ from pyrogram.errors import (
     PhoneCodeInvalid, PhoneCodeExpired
 )
 
- if text.startswith("/string"):
 
 API_TEXT = """🙋‍♂ Hi {},
 
@@ -30,7 +29,7 @@ PHONE_NUMBER_TEXT = (
 
 
 
-@Client.on_message(filters.private & filters.command("start"))
+@Client.on_message(filters.private & filters.command("string"))
 async def generate_str(c, m):
     get_api_id = await c.ask(
         chat_id=m.chat.id,
